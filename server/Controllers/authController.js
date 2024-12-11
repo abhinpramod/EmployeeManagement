@@ -52,10 +52,7 @@ const login = async (req, res) => {
     return res.status(400).json({ message: "Email and password are required" });
   }
 
-  // const user = await User.findOne({ email });
-  // if (!user || !(await bcrypt.compare(password, user.password))) {
-  //   return res.status(401).json({ message: "Invalid credentials" });
-  // }
+
 
   const user = await User.findOne({ email });
   if (!user) {
